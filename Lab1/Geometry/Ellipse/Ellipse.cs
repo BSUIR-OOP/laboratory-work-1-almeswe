@@ -15,22 +15,4 @@ namespace Geometry
         public override void Draw(Graphics g) =>
             g.DrawEllipse(this._defaultPen, this._rect);
     }
-
-    public class Circle : Ellipse
-    {
-        public Circle(int radius, Point center) 
-            : base(radius, radius, center) { }
-
-        public Circle(int radius, int x, int y) 
-            : this(radius, new Point(x, y)) { }
-    }
-
-    public sealed class Dot : Circle
-    {
-        public Dot(Point point) 
-            : base(1, point) { }
-
-        public Dot(int x, int y)
-            : this(new Point(x, y)) { }
-    }
 }
