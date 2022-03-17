@@ -5,15 +5,17 @@ using System.Windows.Forms;
 using Geometry;
 using Geometry.ShapeList;
 
+using System.Collections.Generic;
+
 namespace Lab1
 {
     public partial class MainForm : Form
     {
-        private Shapes _shapes;
+        private List<Shape> _shapes;
 
         public MainForm()
         {
-            this._shapes = new Shapes()
+            this._shapes = new List<Shape>()
             {
                 new Dot(100, 20),
                 new Circle(200, new Point(100, 100)),
@@ -25,10 +27,6 @@ namespace Lab1
                 new Square(new Point(500, 500), 100)
             };
             this.InitializeComponent();
-        }
-
-        private void PictureBoxClick(object sender, EventArgs e)
-        {
         }
 
         private void PictureBoxPaint(object sender, PaintEventArgs e)

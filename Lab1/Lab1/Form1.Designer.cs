@@ -41,7 +41,6 @@ namespace Lab1
             this.PictureBox.Size = new System.Drawing.Size(837, 623);
             this.PictureBox.TabIndex = 0;
             this.PictureBox.TabStop = false;
-            this.PictureBox.Click += new System.EventHandler(this.PictureBoxClick);
             this.PictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.PictureBoxPaint);
             // 
             // MainForm
